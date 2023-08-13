@@ -14,12 +14,12 @@ const router = Router();
 
 router.get("/tasks", authrequire, getTasks);
 
-router.get("/task/:id", authrequire, getTask);
+router.get("/tasks/:id", authrequire, getTask);
 
-router.post("/task", authrequire, validateSchema(createTaskSchema),createtasks);
+router.post("/tasks", authrequire, validateSchema(createTaskSchema),createtasks);
 
-router.put("/task/:id", authrequire, updateTasks);
+router.put("/tasks/:id", authrequire, updateTasks);
 
-router.delete("/task/:id", authrequire, deleTasks);
+router.delete("/tasks/:id", authrequire, deleTasks);
 
 export default router;
